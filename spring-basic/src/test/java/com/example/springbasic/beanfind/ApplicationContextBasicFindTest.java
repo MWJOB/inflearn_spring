@@ -31,7 +31,7 @@ public class ApplicationContextBasicFindTest {
     }
 
 
-    //좋은 코드는 아님, 역할과 구현을 구분, 구체 타입으로 하면 유연성이 떨어짐
+    //좋은 코드는 아님, 역할과 구현을 구분, 구체 타입으로 하면 변경시 유연성이 떨어짐
     @Test
     @DisplayName("구체 타입으로 조회")
     void findBeanByName2() {
