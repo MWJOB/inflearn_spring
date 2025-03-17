@@ -1,11 +1,14 @@
 package com.example.springbasic.member;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+@Getter
 @Component
 public class MemberServiceImpl implements MemberService {
 
+    //테스트 용도
     private final MemberRepository memberRepository;
 
     //생성자를 통해서 주입
@@ -25,8 +28,4 @@ public class MemberServiceImpl implements MemberService {
         return memberRepository.findById(memberId);
     }
 
-    //테스트 용도
-    public MemberRepository getMemberRepository() {
-        return memberRepository;
-    }
 }
