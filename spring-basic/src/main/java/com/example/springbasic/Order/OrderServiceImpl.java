@@ -1,19 +1,20 @@
 package com.example.springbasic.Order;
 
 import com.example.springbasic.discount.DiscountPolicy;
-import com.example.springbasic.discount.FixDiscountPolicy;
-import com.example.springbasic.discount.RateDiscountPolicy;
 import com.example.springbasic.member.Member;
 import com.example.springbasic.member.MemberRepository;
-import com.example.springbasic.member.MemoryMemberRepository;
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     @Getter
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
