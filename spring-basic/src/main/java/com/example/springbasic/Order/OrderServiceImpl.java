@@ -6,9 +6,11 @@ import com.example.springbasic.discount.RateDiscountPolicy;
 import com.example.springbasic.member.Member;
 import com.example.springbasic.member.MemberRepository;
 import com.example.springbasic.member.MemoryMemberRepository;
+import lombok.Getter;
 
 public class OrderServiceImpl implements OrderService {
 
+    @Getter
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
@@ -25,4 +27,5 @@ public class OrderServiceImpl implements OrderService {
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
 }
