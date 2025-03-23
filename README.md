@@ -1,6 +1,6 @@
 # 인프런 김영한님의 강의를 듣고 정리하기 위한 레포지토리
 
-# Spring 핵심 원리 & 핵심 기능 정리
+# Spring 핵심 원리 - 기본편 정리
 
 <details>
 <summary><strong>1. 스프링 핵심 원리</strong></summary>
